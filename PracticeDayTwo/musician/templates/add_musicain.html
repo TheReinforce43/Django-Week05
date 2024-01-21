@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Musicain Home Page{% endblock title %}
+
+{% block content %}
+
+<form action="" method="post" style='margin:auto;width:50%' novalidate>
+
+    {% csrf_token %}
+    {{form | crispy}}
+
+    <button class='btn btn-success'>Submit</button>
+
+</form>
+
+{% endblock content %}
+
+
+

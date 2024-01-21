@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{type}}{% endblock title %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<form action="" method="post" style='width:50%;margin:auto' novalidate>
+
+    {% csrf_token %}
+    <h5 class='text-center mt-4'>{{type}}</h5>
+    {{form | crispy}}
+    <button class='btn btn-success'>Submit</button>
+
+
+</form>
+
+
+{% endblock content %}
+
+
+
+
+
